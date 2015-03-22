@@ -6,18 +6,27 @@ Zippy
 
 ## Installation
 
-To install, clone the script on your system, and make sure the Dependencies are in order:
+### OSX
+
+On OSX, you can install it using [`Homebrew`](http://brew.sh):
+
+```bash
+$ brew tap sheharyarn/tap
+$ brew install zippy
+```
+
+### Others (Manual Installation)
+
+First, clone the repo on your system, and then move the script to your `bin` directory:
 
 ```bash
 $ git clone https://github.com/sheharyarn/zippy
-$ cd zippy
+$ chmod +x zippy/zippy
+$ mv zippy/zippy /usr/local/bin/
+$ rm -rf zippy
 ```
 
-#### Dependencies:
-
- - [Ruby](https://www.ruby-lang.org/)
- - [wget](https://www.gnu.org/software/wget/)
-
+Make sure the [Dependencies](https://github.com/sheharyarn/zippy#dependencies) are in order as well.
 
 ## Usage:
 
@@ -27,6 +36,15 @@ $ zippy link1 link2 link3...
 # Example:
 $ zippy http://www49.zippyshare.com/v/Ytnd6gVS/file.html
 ```
+
+## Dependencies:
+
+`zippy` depends on the following programs. It needs them to work, so when installing manually, make sure
+they are installed as well. No need to do anything when installing from `Homebrew`.
+
+ - [Ruby](https://www.ruby-lang.org/)
+ - [wget](https://www.gnu.org/software/wget/)
+
 
 ## Contributing
 
