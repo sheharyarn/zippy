@@ -4,7 +4,8 @@
 ### from Zippyshare.com in your terminal
 ### using open-uri and wget
 
-### zippy-rb (Sheharyar Naseer © 2015)
+### zippy v0.0.3
+### Sheharyar Naseer © 2015
 
 
 
@@ -51,8 +52,8 @@ def do_magic(link)
     durl   = exprs.gsub(MAIN_REGEX, "#{ host(link) }#{ '\1' }#{ var_a * var_b + sumval }#{ '\3' }")
 
 
-    # Run this output of this command in your terminal 
-    system "wget #{durl} --referer='#{link}' --cookies=off --header 'Cookie: #{cookie}' --user-agent='#{USER_AGENT}'"
+    # This command spawns wget and lets it download 
+    system "wget --quiet --show-progress #{durl} --referer='#{link}' --cookies=off --header 'Cookie: #{cookie}' --user-agent='#{USER_AGENT}'"
 end
 
 
@@ -61,8 +62,10 @@ end
 if ARGV.count == 0
     puts "usage: zippy link [link2 link3 ...]", ""
 else
+    puts ""
     ARGV.each do |link|
         do_magic  link
     end
+    puts "\n"
 end
 
