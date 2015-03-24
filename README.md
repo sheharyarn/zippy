@@ -28,7 +28,7 @@ $ rm -rf zippy
 
 Make sure the [Dependencies](https://github.com/sheharyarn/zippy#dependencies) are in order as well.
 
-## Usage:
+## Usage
 
 ```bash
 $ zippy link1 link2 link3...
@@ -37,13 +37,20 @@ $ zippy link1 link2 link3...
 $ zippy http://www49.zippyshare.com/v/Ytnd6gVS/file.html
 ```
 
-## Dependencies:
+## Dependencies
 
 `zippy` depends on the following programs. It needs them to work, so when installing manually, make sure
 they are installed as well. No need to do anything when installing from `Homebrew`.
 
  - [Ruby](https://www.ruby-lang.org/)
  - [wget](https://www.gnu.org/software/wget/)
+
+
+## TODO
+
+ - Add `--verbose` feature
+ - Add `--quiet` feature
+ - Add `--continue` feature
 
 
 ## Contributing
